@@ -31,7 +31,7 @@ export default function Home() {
   };
   return (
     <div className="max-w-screen relative">
-      <nav className="flex relative max-w-full bg-white/90 backdrop-blur-sm px-3 pl-0 lg:px-8 py-3 lg:py-5 justify-between items-center h-[60px] sticky top-0 z-20">
+      <nav className="flex max-w-full bg-white/90 backdrop-blur-sm px-3 pl-0 lg:px-8 py-3 lg:py-5 justify-between items-center h-[60px] sticky top-0 z-20">
         <Link href="/">
           <div className="bg-[url('/QUB2-Blue.png')] bg-no-repeat bg-center bg-cover h-[50px] w-[140px] recolor-png focus-visible:outline-none"></div>
         </Link>
@@ -179,7 +179,7 @@ export default function Home() {
                   zippers.
                 </li>
                 <li className="text-lg md:text-xl mb-2">
-                  Unpack in seconds with the world{"'"}s first hook & hand
+                  Unpack in seconds with the world{"'"}s first hook & hang
                   system.
                 </li>
                 <li className="text-lg md:text-xl mb-2">
