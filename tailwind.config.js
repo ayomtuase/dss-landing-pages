@@ -10,6 +10,7 @@ module.exports = withMT({
   theme: {
     fontFamily: {
       ["sans"]: ['Lato', 'Helvetica', 'Arial', 'sans-serif'],
+      ["montserrat"]: ['Montserrat', 'Helvetica', 'Arial', 'sans-serif']
     },
     extend: {
       colors: {

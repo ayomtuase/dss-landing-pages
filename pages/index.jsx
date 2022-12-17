@@ -47,33 +47,35 @@ export default function Home() {
             } mobile-nav-toggler bg-azure left-1/2 -translate-x-1/2 before:bg-azure before:left-0 after:bg-azure after:left-0`}
           ></span>
         </button>
+
+        {/* Desktop Links */}
         <div className="md:space-x-2 lg:space-x-10 lg:ml-4 hidden md:flex">
           <Link
-            className="no-underline uppercase text-dover-gray hover:text-azure text-sm font-medium"
+            className="no-underline uppercase hover:text-azure text-sm font-medium"
             href="/"
           >
             LIFESTYLE
           </Link>
           <Link
-            className="no-underline uppercase text-dover-gray hover:text-azure text-sm font-medium"
+            className="no-underline uppercase hover:text-azure text-sm font-medium"
             href="/"
           >
             BACKPACKS
           </Link>
           <Link
-            className="no-underline uppercase text-dover-gray hover:text-azure text-sm font-medium"
+            className="no-underline uppercase hover:text-azure text-sm font-medium"
             href="/"
           >
             TRAVEL
           </Link>
           <Link
-            className="no-underline uppercase text-dover-gray hover:text-azure text-sm font-medium"
+            className="no-underline uppercase hover:text-azure text-sm font-medium"
             href="/"
           >
             BEHIND THE PACKS
           </Link>
           <Link
-            className="no-underline uppercase text-dover-gray hover:text-azure text-sm font-medium"
+            className="no-underline uppercase hover:text-azure text-sm font-medium"
             href="/"
           >
             STORIES
@@ -792,9 +794,9 @@ export default function Home() {
             <Image
               src="/LTweb2-packingcubes-productimage-png-008.png"
               alt="bag image"
-              className="h-auto w-auto"
-              width={400}
-              height={370}
+              className="h-auto w-2/5"
+              width={1000}
+              height={600}
             />
             <button className="text-2xl font-semibold px-4 py-3 shadow-lg bg-azure rounded-lg hover:rounded-none text-white">
               SHOP NOW
@@ -804,7 +806,7 @@ export default function Home() {
 
         <section className="py-5 shadow-[0px_0_3px_rgba(0,0,0,0.3)]">
           <p className="text-center">
-            © Copyright 2022. Made by Ayomide M. Oguntuase
+            © Copyright 2022. Digital Super Systems. Made by Ayomide M. Oguntuase
           </p>
         </section>
       </main>
