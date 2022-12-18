@@ -30,6 +30,12 @@ export default function Home() {
     unmount: { scale: 0.9 },
   };
   return (
+    <>
+    <Head>
+      <title>
+        Qubix
+      </title>
+    </Head>    
     <div className="max-w-screen relative">
       <nav className="flex max-w-full bg-white/90 backdrop-blur-sm px-3 pl-0 lg:px-8 py-3 lg:py-5 justify-between items-center h-[60px] sticky top-0 z-20">
         <Link href="/">
@@ -39,7 +45,9 @@ export default function Home() {
         {/* Mobile Menu toggler */}
         <button
           onClick={() => setShowMobileNav(!showMobileNav)}
-          className={`${showMobileNav ? "hidden": ""} focus-visible:outline-none h-[35px] w-[30px] bg-transparent md:hidden relative flex items-center`}
+          className={`${
+            showMobileNav ? "hidden" : ""
+          } focus-visible:outline-none h-[35px] w-[30px] bg-transparent md:hidden relative flex items-center`}
         >
           <span
             className={`${
@@ -92,17 +100,16 @@ export default function Home() {
         </div>
 
         {/* Mobile Nav Menu*/}
-
         <div
           className={`min-h-screen ${
-            showMobileNav ? "" : "hidden"
-          } bg-[#007FD2]/95 flex flex-col w-full items-center justify-center backdrop-blur-md transition absolute top-0 z-50`}
+            showMobileNav ? "translate-x-0" : "-translate-x-full"
+          } bg-[#007FD2]/95 will-change-transform md:hidden flex flex-col w-full items-center justify-center backdrop-blur-xl transition-transform  absolute top-0 z-50`}
         >
           <button
             onClick={() => setShowMobileNav(!showMobileNav)}
             className="focus-visible:outline-none h-[35px] w-[30px] bg-transparent absolute top-[3%] right-[7%] flex items-center"
           >
-            <TfiClose className="text-concrete text-2xl absolut "/>
+            <TfiClose className="text-concrete text-2xl absolut " />
           </button>
           <ul className="h-full space-y-12 flex flex-col w-50 place-items-center">
             <li onClick={() => setShowMobileNav(!showMobileNav)}>
@@ -367,51 +374,56 @@ export default function Home() {
             }}
             className="mySwiper relative mt-16 description min-h-min flex"
           >
-            <SwiperSlide className="h-full py-4">
-              <Image
-                src="/LTweb2-packingcubes-benefitimage-004.jpg"
-                className="bg-center"
-                alt="reviewer 1"
-                width={1000}
-                height={500}
-              />
-            </SwiperSlide>
-            <SwiperSlide className="h-full py-4">
-              <Image
-                src="/LTweb2-packingcubes-corecubes-001.jpg"
-                className="bg-center"
-                alt="reviewer 2"
-                width={1000}
-                height={500}
-              />
-            </SwiperSlide>
-            <SwiperSlide className="h-full py-4">
-              <Image
-                src="/LTweb2-packingcubes-corecubes-002.jpg"
-                className="bg-center"
-                alt="reviewer 2"
-                width={1000}
-                height={500}
-              />
-            </SwiperSlide>
-            <SwiperSlide className="h-full py-4">
-              <Image
-                src="/LTweb2-packingcubes-productspecs-001.jpg"
-                className="bg-center"
-                alt="reviewer 2"
-                width={1000}
-                height={500}
-              />
-            </SwiperSlide>
-            <SwiperSlide className="h-full py-4">
-              <Image
-                src="/LTweb2-packingcubes-productspecs-002.jpg"
-                className="bg-center"
-                alt="reviewer 2"
-                width={1000}
-                height={500}
-              />
-            </SwiperSlide>
+            {[
+              {
+                // texts: [],
+                imgSrc: "/LTweb2-packingcubes-benefitimage-004.jpg",
+              },
+              {
+                // text: "The medium cube fits 13 clothing items and a folding board in the same size",
+                imgSrc: "/LTweb2-packingcubes-corecubes-001.jpg",
+              },
+              {
+                // text: "The large cube fits 11 big clothing items and a folding board of its own.",
+                imgSrc: "/LTweb2-packingcubes-corecubes-002.jpg",
+              },
+              {
+                // texts: [
+                //   {
+                //     title: "Toiletry Cube",
+                //     description:
+                //       "7 optimised pockets, 4 small mesh pockets, 1 toothbrush compartment, 1 big mesh pocket and 1 big pouch for all your toiletry items.",
+                //   },
+                //   {
+                //     title: "Electronics Cube",
+                //     description: "4 pockets. Optimised compartments help you organise cables, adapters, memory cards, flash drives and more. 18 elastic grid slots. Neatly pack all kinds of cables so they never tangle again. Padded outer shell. Extra protection for your valuable devices."
+                //   }, 
+                //   {
+                //     title: "Shoe bag",
+                //     description: "Helps keep your shoes tidy and your clothes clean."
+                //   },
+                //   {
+                //     title: "Laundry bag",
+                //     description: "Folds tiny and it’s super useful whenever you need it."
+                //   }
+                // ],
+                imgSrc: "/LTweb2-packingcubes-productspecs-001.jpg",
+              },
+              {
+                text: "",
+                imgSrc: "/LTweb2-packingcubes-productspecs-002.jpg",
+              },
+            ].map((description, index) => (
+              <SwiperSlide key={index} className="h-full py-4">
+                <Image
+                  src={description.imgSrc}
+                  className="bg-center"
+                  alt={`description image ${index}`}
+                  width={1000}
+                  height={500}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </section>
 
@@ -806,10 +818,12 @@ export default function Home() {
 
         <section className="py-5 shadow-[0px_0_3px_rgba(0,0,0,0.3)]">
           <p className="text-center">
-            © Copyright 2022. Digital Super Systems. Made by Ayomide M. Oguntuase
+            © Copyright 2022. Digital Super Systems. Designed by Ayomide M.
+            Oguntuase
           </p>
         </section>
       </main>
     </div>
+    </>
   );
 }

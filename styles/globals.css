@@ -14,13 +14,15 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-  background: white;
+  background: transparent;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   height: 70px !important;
   width: 70px !important;
   position: relative;
   border-radius: 50%;
 }
+
+
 
 
 
@@ -41,16 +43,27 @@ body {
   opacity: 0.3;
 }
 
+.page-2-hero .swiper-button-prev, .page-2-hero .swiper-button-next{
+  background: white;
+}
+
+@media (max-width: 640px){
+  .page-2-hero .swiper-button-prev, .page-2-hero .swiper-button-next{
+    background: transparent;
+    top: 75%;
+  } 
+}
+
 .page-2-hero .swiper-slide {
   transition: opacity 500ms ease-in-out, transform 500ms ease-in-out ;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .swiper-button-prev,
   .swiper-button-next {
     background: transparent;
   }
-}
+} */
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
