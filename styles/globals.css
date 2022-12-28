@@ -55,7 +55,8 @@ body {
 }
 
 .page-2-hero .swiper-slide {
-  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out ;
+  will-change: opacity, transform;
+  transition: opacity 400ms ease-in-out, transform 400ms ease-in-out ;
 }
 
 /* @media (max-width: 768px) {
