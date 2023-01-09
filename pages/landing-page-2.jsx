@@ -574,8 +574,8 @@ export default function LandingPage2() {
                       width={600}
                       height={600}
                     />
-                    <div className="hidden translate-y-full transition-transform ease-in-out duration-[2000ms] group-hover:flex group-hover:translate-y-0 absolute bottom-0 right-0 rounded-b-xl left-0 py-3 justify-center bg-gradient-to-r from-concrete to-[#007FD2]">
-                      <button className="bg-black text-mystic px-4  py-3 text-base font-medium rounded-xl">
+                    <div className="transition-all ease-in-out group flex items-center justify-center h-0 overflow-hidden group-hover:h-[75px]  absolute bottom-0 right-0 rounded-b-xl left-0 bg-gradient-to-r from-concrete to-[#007FD2]">
+                      <button className="bg-black text-mystic px-4 py-3 text-base font-medium rounded-xl">
                         BUY
                       </button>
                     </div>
